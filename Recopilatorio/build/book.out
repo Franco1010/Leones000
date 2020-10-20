@@ -1,0 +1,79 @@
+\BOOKMARK [1][-]{section.1}{Algorithm}{}% 1
+\BOOKMARK [1][-]{section.2}{Math}{}% 2
+\BOOKMARK [1][-]{section.3}{Data Structures}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Disjoint set}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Disjoint set with rollback}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Sparce table}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Min-Max queue}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Sqrt descomposition}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Mo's algorithm}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Fenwick tree}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.8}{Segment tree}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.9}{Lazy segment tree}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.10}{Persistent segment tree}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Graphs}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Breadth first search}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Depth first search}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Floyd Warshall}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.4}{Bellman Ford}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.5}{Dijkstra}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.6}{Tarjan algorithm \(SCC\)}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.7}{Kosaraju algorithm \(SCC\)}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.8}{Kahn-s algorithm}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.9}{Cutpoints}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.10}{Bridges}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.11}{Detect a cycle}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.12}{Euler tour}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.13}{Lowest common ancestor \(LCA\)}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.14}{Heavy-light decomposition}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.15}{Centroid decomposition}{section.4}% 29
+\BOOKMARK [1][-]{section.5}{Flows}{}% 30
+\BOOKMARK [2][-]{subsection.5.1}{Edmonds-Karp}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.2}{Dinic}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.3}{Min cost flow}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.4}{Hopcroft-Karp}{section.5}% 34
+\BOOKMARK [1][-]{section.6}{Number Theory}{}% 35
+\BOOKMARK [2][-]{subsection.6.1}{Inverse}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.2}{Sieve of Eratosthenes}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.3}{Phi of euler}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.4}{GCD / LCM}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.5}{Linear diophantine equations}{section.6}% 40
+\BOOKMARK [2][-]{subsection.6.6}{Modular power}{section.6}% 41
+\BOOKMARK [2][-]{subsection.6.7}{Miller Test}{section.6}% 42
+\BOOKMARK [2][-]{subsection.6.8}{Teoremas}{section.6}% 43
+\BOOKMARK [1][-]{section.7}{Numeros}{}% 44
+\BOOKMARK [2][-]{subsection.7.1}{Formulas}{section.7}% 45
+\BOOKMARK [2][-]{subsection.7.2}{Ternas pitagoricas}{section.7}% 46
+\BOOKMARK [2][-]{subsection.7.3}{LCM Y GCD}{section.7}% 47
+\BOOKMARK [2][-]{subsection.7.4}{Phi de Euler}{section.7}% 48
+\BOOKMARK [2][-]{subsection.7.5}{Diphantine Equations}{section.7}% 49
+\BOOKMARK [1][-]{section.8}{Math}{}% 50
+\BOOKMARK [2][-]{subsection.8.1}{Identidades}{section.8}% 51
+\BOOKMARK [2][-]{subsection.8.2}{Ec. Caracteristica}{section.8}% 52
+\BOOKMARK [2][-]{subsection.8.3}{Teorema Chino del Resto}{section.8}% 53
+\BOOKMARK [2][-]{subsection.8.4}{Tablas y cotas \(Primos, Divisores, Factoriales, etc\)}{section.8}% 54
+\BOOKMARK [2][-]{subsection.8.5}{Geometria}{section.8}% 55
+\BOOKMARK [2][-]{subsection.8.6}{Geo geo}{section.8}% 56
+\BOOKMARK [1][-]{section.9}{Strings}{}% 57
+\BOOKMARK [2][-]{subsection.9.1}{Hash \(usa al menos dos hashes\)}{section.9}% 58
+\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 59
+\BOOKMARK [2][-]{subsection.9.3}{Manacher algorithm}{section.9}% 60
+\BOOKMARK [2][-]{subsection.9.4}{Trie}{section.9}% 61
+\BOOKMARK [2][-]{subsection.9.5}{Suffix automaton}{section.9}% 62
+\BOOKMARK [2][-]{subsection.9.6}{Aho corasick}{section.9}% 63
+\BOOKMARK [1][-]{section.10}{Game Theory}{}% 64
+\BOOKMARK [2][-]{subsection.10.1}{Grundy Numbers}{section.10}% 65
+\BOOKMARK [1][-]{section.11}{Dynamic Programming}{}% 66
+\BOOKMARK [2][-]{subsection.11.1}{Matrix Chain Multiplication}{section.11}% 67
+\BOOKMARK [2][-]{subsection.11.2}{Knapsack 0/1}{section.11}% 68
+\BOOKMARK [2][-]{subsection.11.3}{Convex Hull Trick}{section.11}% 69
+\BOOKMARK [2][-]{subsection.11.4}{Kadane}{section.11}% 70
+\BOOKMARK [1][-]{section.12}{Combinatorics}{}% 71
+\BOOKMARK [2][-]{subsection.12.1}{n! mod p}{section.12}% 72
+\BOOKMARK [2][-]{subsection.12.2}{Pascal's triangle}{section.12}% 73
+\BOOKMARK [2][-]{subsection.12.3}{Combi}{section.12}% 74
+\BOOKMARK [2][-]{subsection.12.4}{Catalan numbers}{section.12}% 75
+\BOOKMARK [2][-]{subsection.12.5}{Identities}{section.12}% 76
+\BOOKMARK [1][-]{section.13}{Ayudamemoria}{}% 77
+\BOOKMARK [1][-]{section.14}{Template}{}% 78
+\BOOKMARK [1][-]{section.15}{Errores comunes, no metas penalty hoy, porfa}{}% 79
