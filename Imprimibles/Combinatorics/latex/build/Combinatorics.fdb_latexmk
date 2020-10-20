@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1603173448 "Combinatorics.tex" "build/Combinatorics.pdf" "Combinatorics" 1603173449
+  "/usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1583102494 39451 60d7debd9ef8ece44cbe965493576c2d ""
+  "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
+  "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
+  "Combinatorics.tex" 1603173448 1208 b54db11baf7bf31f5194320b28411ec4 ""
+  "build/Combinatorics.aux" 1603173442 8 a94a2480d3289e625eea47cd1b285758 ""
+  (generated)
+  "build/Combinatorics.log"
+  "build/Combinatorics.pdf"

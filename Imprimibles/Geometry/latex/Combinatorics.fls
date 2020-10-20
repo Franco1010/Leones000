@@ -1,6 +1,0 @@
-PWD /Users/franco1010/Dropbox/Documentacion ACM/Imprimibles/Combinatorics/latex
-INPUT /usr/local/texlive/2019/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT Combinatorics.tex
-OUTPUT Combinatorics.log

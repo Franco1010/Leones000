@@ -1,4 +1,4 @@
-struct segtree{
+struct segtree{ // TODO: poder Monoid y F = function<Monoid(Monoid, Monoid)>;
   #define mid (l + r) / 2
   #define left(u) (u + 1)
   #define right(u) (u + ((mid - l + 1) << 1))

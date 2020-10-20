@@ -1,4 +1,4 @@
-lli calc(int l, int r){
+lli calc(int l, int r){ // O(N ^ 3) // TODO: agregar version iterativa en O(N ^ 2)
   if( l >= r ){
     return 0ll;
   }

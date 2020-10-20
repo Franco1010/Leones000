@@ -1,4 +1,3 @@
-
 lli baby_step(lli a, lli b, lli p){
   a %= p;
   b %= p;

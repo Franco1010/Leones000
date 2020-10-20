@@ -1,8 +1,7 @@
-struct LazySegTree{
+struct LazySegTree{ // TODO: poder Monoid y F = function<Monoid(Monoid, Monoid)>;
   #define mid (l + r)/2
   #define left(u) (u + 1)
   #define right(u) (u + ((mid - l + 1) << 1))
-
   struct Node{
     lli s, lazy;
     Node(lli s = 0, int lazy = 0): s(s), lazy(lazy) {}
@@ -10,11 +9,7 @@ struct LazySegTree{
       return Node(s + n.s, 0);
     }
   };
-
-  int n;
-  Node z;
   vector<Node> st;
-
   LazySegTree(int n): n(n){
     st.resize(2*n);
   }
