@@ -1,0 +1,6 @@
+PWD /Users/crystalrodriguez/Dropbox/Documentacion ACM/Imprimibles/Number_Theory/latex
+INPUT /usr/local/texlive/2019/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT NumberTheory.tex
+OUTPUT NumberTheory.log

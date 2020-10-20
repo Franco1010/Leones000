@@ -1,0 +1,70 @@
+%
+% \documentclass[11pt]{article}
+%
+% \newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+%
+% \topmargin -.5in
+% \textheight 9in
+% \oddsidemargin -.25in
+% \evensidemargin -.25in
+% \textwidth 7in
+%
+% \begin{document}
+%
+% % ========== Edit your name here
+% \author{Leones (0,0,0)}
+% \title{Number Theory}
+% \maketitle
+%
+% \medskip
+%
+% ========== Begin answering questions here
+
+\subsection{Identities}
+\begin{enumerate}
+
+\item
+\begin{equation}
+  {n \choose n} = {n \choose 0} = 1
+\end{equation}
+
+\item
+\begin{equation}
+  {n \choose 1} = n
+\end{equation}
+
+\item
+\begin{equation}
+  {n \choose k} = {n \choose n-k}
+\end{equation}
+
+\item
+\begin{equation}
+  {n-1 \choose k-1} = {n-1 \choose k} = {n \choose k}
+\end{equation}
+
+\item
+\begin{equation}
+  2^n = \sum_{i = 0}^{n} {n \choose i}
+\end{equation}
+
+\item
+Hockey Stick Rule - Pascal triangle
+\begin{equation}
+  \sum_{i = 0}^{r}{C_{i}^{n+1}} = \sum_{i = 0}^{r}{C_{n}^{n+i}} = {C_{r}^{n+r+1}} = {C_{n+1}^{n+r+1}}
+\end{equation}
+
+\item
+Burnside's lemma
+
+(useful in taking account of symmetry when counting mathematical objects)
+\begin{equation}
+  |X/G| = \frac{1}{|G|} \sum_{g\in G} |X^{g}|
+\end{equation}
+
+
+\end{enumerate}
+
+% % \end{document}
+% \grid
+% \grid
