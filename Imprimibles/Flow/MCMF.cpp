@@ -24,8 +24,8 @@ template <typename tf, typename tc>struct MCF{
 			prio[s]=0; curflow[s]=INFFLOW;
 			while(!q.empty()) {
 				auto cur=q.top();
-				tc d=cur.fst;
-				int u=cur.snd;
+				tc d=cur.f;
+				int u=cur.s;
 				q.pop();
 				if(d!=prio[u]) continue;
 				for(int i=0; i<sz(g[u]); ++i) {
