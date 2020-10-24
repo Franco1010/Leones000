@@ -15,13 +15,13 @@ lli baby_step(lli a, lli b, lli p){
   unordered_map<lli, int> baby;
   lli N = ceil(sqrt(p));
   lli base = b;
-  Forn(i,N){
+  fore(i,0,N){
     baby[base]=i;
     base= base * a % p;
   }
-  base = modpow(a,N,p);
+  base = powm(a,N,p);
   lli key = tmp;
-  for(int i=1;i<N+2;i++){
+  fore(i,1,N+2){
     key = base * key % p;
     if(baby.count(key))return i*N-baby[key]+cnt;
   }
