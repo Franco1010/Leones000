@@ -1,62 +1,29 @@
-struct segtree{ // TODO: poder Monoid y F = function<Monoid(Monoid, Monoid)>;
+struct Segtree{ // TODO: poder Monoid y F = function<Monoid(Monoid, Monoid)>;
   #define mid (l + r) / 2
   #define left(u) (u + 1)
   #define right(u) (u + ((mid - l + 1) << 1))
-
-  struct node{
-    lli sum = 0;
-    int mx = -1;
+  struct Node{
+    lli s, mx;
+    Node(lli s = 0, lli mx = -1): s(s), mx(mx) {}
+    Node operator + (const Node &n){
+      return Node(s + n.s, max(mx, n.mx));
+    }
   };
-
-  vector<node> st;
-  node z;
-  int n;
-
-  friend node operator + (const node a, const node b){
-    node c;
-    c.sum = a.sum + b.sum;
-    c.mx = max(a.mx, b.mx);
-    return c;
-  }
-
-  void build(int u, int l, int r){ // O(N * logN)
-    if( l == r ){
-      st[u] = {};
+  vector<Node> st;
+  Segtree(int n): st(2 * n) {}
+  void update(int u, int l, int r, int kth, lli val){ // O(logN)
+    if(l == r){
+      st[u].s = val;
+      st[u].mx = val;
       return;
     }
-    build(left(u), l, mid);
-    build(right(u), mid + 1, r);
+    if(kth <= mid) update(left(u), l, mid, kth, val);
+    else update(right(u), mid + 1, r, kth, val);
     st[u] = st[left(u)] + st[right(u)];
   }
-
-  segtree(int n1 = 1){
-    n = n1;
-    st.resize(2 * n); // wow :O!
-    build(0, 1, n);
+  Node query(int u, int l, int r, int ll, int rr){ // O(logN)
+    if(l > r or r < ll or l > rr) return Node();
+    if(ll <= l and r <= rr) return st[u];
+    return query(left(u), l, mid, ll, rr) + query(right(u), mid + 1, r, ll, rr);
   }
-
-  void update(int u, int l, int r, int kth, int v){ // O(logN)
-    if( l == r ){
-      st[u] = {};
-      return;
-    }
-    if( kth <= mid ){
-      update(left(u), l, mid, kth, v);
-    }else{
-      update(right(u), mid + 1, r, kth, v);
-    }
-    st[u] = st[left(u)] + st[right(u)];
-  }
-
-  node query(int u, int l, int r, int ll, int rr){ // O(logN)
-    if( r < ll || rr < l || r < l ){
-      return z;
-    }
-    if( ll <= l && r <= rr ){
-      return st[u];
-    }
-    return query(left(u), l, mid, ll, rr) +
-           query(right(u), mid + 1, r, ll, rr);
-  }
-  #undef mid
 };
