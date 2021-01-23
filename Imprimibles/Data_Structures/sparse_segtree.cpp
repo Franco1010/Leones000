@@ -9,7 +9,7 @@ lli s(pNode u){return u ? u->s : 0;}
 void pull(pNode& u, pNode l, pNode r){
   u->s = s(l) + s(r);
 }
-void update(pNode u, int l, int r, int kth, lli val){
+void update(pNode& u, int l, int r, int kth, lli val){
   if(l == r){
     u->s = val;
     return;
