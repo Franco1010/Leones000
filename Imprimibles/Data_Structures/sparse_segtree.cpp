@@ -1,4 +1,4 @@
-#define mid (l + r) / 2
+#define mid l + (r - l) / 2
 typedef struct Node *pNode;
 struct Node {
 	lli s;
