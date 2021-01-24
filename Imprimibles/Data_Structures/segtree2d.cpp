@@ -1,5 +1,5 @@
 const lli INF = 1E18;
-struct Segtree{// TODO: poder Monoid y F = function<Monoid(Monoid, Monoid)>;
+struct Segtree{
   #define midx (lx + rx) / 2
   #define midy (ly + ry) / 2
   #define leftx(u) (u + 1)
