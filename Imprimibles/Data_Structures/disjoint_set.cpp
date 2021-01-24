@@ -1,33 +1,27 @@
 struct DSU{
-  vector<int> pr, tot;
+  vi pr, rank;
   stack<ii> what;
-  dsu(int nn = 0){ // O(N)
-    pr.resize(nn + 5);
+  DSU(int n): pr(n), rank(n, 1){ // O(N)
     iota(all(pr), 0);
-    tot.resize(nn + 5, 1);
   }
-  int find(int u){ // O(logN)
-    return pr[u] == u ? u: find(pr[u]);
+  int find(int u){ // O(1)
+    return pr[u] == u ? u: pr[u] = find(pr[u]);
   }
-  void unite(int u, int v){ // O(logN)
+  void unite(int u, int v){ // O(1)
     u = find(u), v = find(v);
-    if( u == v ){
-      what.push({-1, -1});
-    }else{
-      if( tot[u] < tot[v] ){
-        swap(u, v);
-      }
-      what.push({u, v});
-      tot[u] += tot[v];
+    if(u != v){
+      if(rank[u] < rank[v]) swap(u, v);
+      rank[u] += rank[v];
       pr[v] = u;
-    }
+      what.push({u, v});
+    }else what.push({-1, -1});
   }
   ii rollback(){ // O(1)
     ii last = what.top();
     what.pop();
     int u = last.f, v = last.s;
-    if( u != -1 ){
-      tot[u] -= tot[v];
+    if(u != -1){
+      rank[u] -= rank[v];
       pr[v] = v;
     }
     return last;
