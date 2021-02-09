@@ -1,69 +1,66 @@
-struct Factorize {
-    using lll = __int128_t;
-    random_device rnd;
-    lli modpow(lli a, lli n, lli mod) {
-        lli ret = 1;
-        while (n > 0) {
-            if (n & 1) ret = lll(ret) * lll(a) % lll(mod);
-            a = lll(a) * lll(a) % lll(mod);
-            n >>= 1;
-        }
-        return ret;
-    }
-    lli Rho(lli n) {
-        auto f = [&](lli x) { return (lll(x) * lll(x) + lll(1)) % lll(n); };
-        while (1) {
-            lli x = uniform_int_distribution<lli>(0, n - 1)(rnd);
-            lli y = f(x);
-            while (1) {
-                lli d = gcd(abs(x - y), n);
-                if (d == n) break;
-                if (1 < d) return d;
-                x = f(x);
-                y = f(f(y));
-            }
-        }
-    }
-    inline bool Miller_Rabin(lli n) {
-        if (n == 1) return 0;
-        lli d = n - 1, s = 0;
-        while (~d & 1) d >>= 1, s++;
-        auto check = [&](lli a) {
-            lli x = modpow(a, d, n);
-            if (x == 1) return 1;
-            lli y = n - 1;
-            for (int i = 0; i < s; i++) {
-                if (x == y) return 1;
-                x = lll(x) * lll(x) % lll(n);
-            }
-            return 0;
-        };
-        for (lli a : {2, 325, 9375, 28178, 450775, 9780504, 1795265022}) {
-            if (a >= n) break;
-            if (!check(a)) return 0;
-        }
-        return 1;
-    }
-    map<lli, int> operator()(lli n) {
-        map<lli, int> ret;
-        while (~n & 1) {
-            n >>= 1;
-            ret[2]++;
-        }
-        queue<lli> q;
-        q.push(n);
-        while (sz(q)) {
-            lli now = q.front();
-            q.pop();
-            if (now == 1) continue;
-            if (Miller_Rabin(now)) {
-                ret[now]++;
-                continue;
-            }
-            lli p = Rho(now);
-            q.push(p);
-            q.push(now / p);
-        }
-        return ret;
-    }
-} factorize;
+lli gcd(lli a, lli b){return a?gcd(b%a,a):b;}
+lli mulmod(lli a, lli b, lli m) {
+	lli r=a*b-(lli)((long double)a*b/m+.5)*m;
+	return r<0?r+m:r;
+}
+lli expmod(lli b, lli e, lli m){
+	if(!e)return 1;
+	lli q=expmod(b,e/2,m);q=mulmod(q,q,m);
+	return e&1?mulmod(b,q,m):q;
+}
+bool is_prime_prob(lli n, int a){
+	if(n==a)return true;
+	lli s=0,d=n-1;
+	while(d%2==0)s++,d/=2;
+	lli x=expmod(a,d,n);
+	if((x==1)||(x+1==n))return true;
+	fore(rep,0,s-1){
+		x=mulmod(x,x,n);
+		if(x==1)return false;
+		if(x+1==n)return true;
+	}
+	return false;
+}
+bool rabin(lli n){ // true iff n is prime
+	if(n==1)return false;
+	int ar[]={2,3,5,7,11,13,17,19,23};
+	fore(i,0,9)if(!is_prime_prob(n,ar[i]))return false;
+	return true;
+}
+const int MAXP=1e6+1; // sieve size
+int sv[MAXP]; // sieve
+lli add(lli a, lli b, lli m){return (a+=b)<m?a:a-m;}
+lli rho(lli n){
+	static lli s[MAXP];
+	while(1){
+		lli x=rand()%n,y=x,c=rand()%n;
+		lli *px=s,*py=s,v=0,p=1;
+		while(1){
+			*py++=y=add(mulmod(y,y,n),c,n);
+			*py++=y=add(mulmod(y,y,n),c,n);
+			if((x=*px++)==y)break;
+			lli t=p;
+			p=mulmod(p,abs(y-x),n);
+			if(!p)return gcd(t,n);
+			if(++v==26){
+				if((p=gcd(p,n))>1&&p<n)return p;
+				v=0;
+			}
+		}
+		if(v&&(p=gcd(p,n))>1&&p<n)return p;
+	}
+}
+void init_sv(){
+	fore(i,2,MAXP)if(!sv[i])for(lli j=i;j<MAXP;j+=i)sv[j]=i;
+}
+void fact(lli n, map<lli,int>& f){ // call init_sv first!!!
+	for(auto&& p:f){
+		while(n%p.f==0){
+			p.s++;
+			n/=p.f;
+		}
+	}
+	if(n<MAXP)while(n>1)f[sv[n]]++,n/=sv[n];
+	else if(rabin(n))f[n]++;
+	else {lli q=rho(n);fact(q,f);fact(n/q,f);}
+}
