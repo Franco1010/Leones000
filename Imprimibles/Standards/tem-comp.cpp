@@ -34,9 +34,18 @@ template <typename T> static constexpr T inf = numeric_limits<T>::max() / 2;
 // auto rnd=bind(uniform_int_distribution<long long>(L,R), mt19937(time(0)));
 // double en rango [L, R)
 // auto rnd=bind(uniform_real_distribution<double>(L,R), mt19937(time(0)));
+lli MOD = 1e9 + 7;
 lli gcd(lli a, lli b){return (b?gcd(b,a%b):a);}
 lli lcm(lli a, lli b){ if(!a || !b) return 0; return a * b / gcd(a, b); }
 int popcount(lli x) { return __builtin_popcountll(x); }
+lli powm(lli a, lli b){
+    lli res =1;
+    while(b){ if(b&1) res = (res * a) % MOD; a = (a*a) % MOD; b/=2; }
+    return res;
+}
+lli invm(lli a) {
+  return powm(a, MOD - 2);
+}
 lli poww(lli a, lli b){
     lli res =1;
     while(b){ if(b&1) res = res * a; a = a*a; b/=2; }
