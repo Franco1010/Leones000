@@ -5,10 +5,6 @@
 //#pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,fast-math")
 //#pragma GCC target("avx,avx2,fma")
 #include <bits/stdc++.h>
-// #include <ext/pb_ds/assoc_container.hpp>
-// #include <ext/pb_ds/trie_policy.hpp>
-// using namespace __gnu_pbds;
-// typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 #define f first
 #define s second
 #define fore(i,a,b) for(int i = (a), ThxMK = (b); i < ThxMK; ++i)
@@ -18,6 +14,10 @@
 #define sz(s) int(s.size())
 #define ENDL '\n'
 using namespace std;
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/trie_policy.hpp>
+// using namespace __gnu_pbds;
+// typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 typedef long double ld;
 typedef long long lli;
 typedef pair<lli,lli> ii;
@@ -51,7 +51,5 @@ vi sieve(int N){
     return primes;
 }
 int main(){ _
-  // freopen("file.in","r",stdin);
-  // freopen("file.out","w",stdout);
   return 0;
 }
