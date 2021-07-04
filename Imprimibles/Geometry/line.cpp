@@ -1,4 +1,5 @@
-int sgn2(double x){return x<0?-1:1;}
+//Needs EPS, INF and DINF
+
 struct ln {
 	pt p,pq;
 	ln(pt p, pt q):p(p),pq(q-p){}
@@ -23,7 +24,8 @@ struct ln {
 //		if(*this/l)return dist(l.p);
 //		return abs((l.p-p)*(pq^l.pq))/(pq^l.pq).norm();
 //	}
-	ln rot(auto a){return ln(p,p+pq.rot(a));} // 2D
+	ln rot(double a){return ln(p,p+pq.rot(a));} // 2D
+	ln rot(pt a){return ln(p,p+pq.rot(a));}
 };
 ln bisector(ln l, ln m){ // angle bisector
 	pt p=l^m;
