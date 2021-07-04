@@ -1,3 +1,5 @@
+//Needs a EPS
+
 struct pt {  // for 3D add z coordinate
 	double x,y;
 	pt(double x, double y):x(x),y(y){}
