@@ -1,8 +1,8 @@
 template <typename tf, typename tc>struct MCF{
-	int n;
+int n;
   tf INFFLOW;
   tc INFCOST;
-	vector<tc> prio, pot;
+  vector<tc> prio, pot;
   vector<tf> curflow;
   vector<int> prevedge,prevnode;
 	priority_queue<pair<tc, int>, vector<pair<tc, int>>, greater<pair<tc, int>>> q;

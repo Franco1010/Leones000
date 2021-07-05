@@ -1,6 +1,6 @@
 struct DSU{
-  vi pr, rank;
-  stack<ii> what;
+  vector<int> pr, rank;
+  stack<pair<int,int>> what;
   DSU(int n): pr(n), rank(n, 1){ // O(N)
     iota(all(pr), 0);
   }
@@ -16,8 +16,8 @@ struct DSU{
       what.push({u, v});
     }else what.push({-1, -1});
   }
-  ii rollback(){ // O(1)
-    ii last = what.top();
+  pair<int,int> rollback(){ // O(1)
+    pair<int,int> last = what.top();
     what.pop();
     int u = last.f, v = last.s;
     if(u != -1){
