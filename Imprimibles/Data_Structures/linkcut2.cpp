@@ -7,10 +7,10 @@ inline int joinD(int d1, int d2){
   if(d1==N_DEL)return d2;if(d2==N_DEL)return d1;return mOp(d1, d2);}
 inline int joinVD(int v, int d){return d==N_DEL ? v : mOp(v, d);}
 struct Node_t{
-  int tam, nVal, tVal, d;
+  int cnt, nVal, tVal, d;
   bool rev;
   Node_t *c[2], *p;
-  Node_t(int v) : tam(1), nVal(v), tVal(v), d(N_DEL), rev(0), p(0){
+  Node_t(int v) : cnt(1), nVal(v), tVal(v), d(N_DEL), rev(0), p(0){
     c[0]=c[1]=0;
   }
   bool isRoot(){return !p || (p->c[0] != this && p->c[1] != this);}
@@ -19,19 +19,19 @@ struct Node_t{
       rev=0; swap(c[0], c[1]);
       fore(x,0,2)if(c[x])c[x]->rev^=1;
     }
-    nVal=joinVD(nVal, d); tVal=joinVD(tVal, dOnSeg(d, tam));
+    nVal=joinVD(nVal, d); tVal=joinVD(tVal, dOnSeg(d, cnt));
     fore(x,0,2)if(c[x])c[x]->d=joinD(c[x]->d, d);
     d=N_DEL;
   }
   void upd();
 };
 typedef Node_t* Node;
-int getSize(Node r){return r ? r->tam : 0;}
+int getSize(Node r){return r ? r->cnt : 0;}
 int getPV(Node r){
-  return r ? joinVD(r->tVal, dOnSeg(r->d,r->tam)) : N_VAL;}
+  return r ? joinVD(r->tVal, dOnSeg(r->d,r->cnt)) : N_VAL;}
 void Node_t::upd(){
   tVal = qOp(qOp(getPV(c[0]), joinVD(nVal, d)), getPV(c[1]));
-  tam = 1 + getSize(c[0]) + getSize(c[1]);
+  cnt = 1 + getSize(c[0]) + getSize(c[1]);
 }
 void conn(Node c, Node p, int il){if(c)c->p=p;if(il>=0)p->c[!il]=c;}
 void rotate(Node x){
