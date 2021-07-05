@@ -1,5 +1,4 @@
 #define mid l + (r - l) / 2
-typedef struct ST *PST;
 struct Node{
   lli s, z;
   Node(lli s = 0, lli z = 0): s(s), z(z) {};
@@ -9,38 +8,46 @@ struct Node{
 };
 struct ST {
 	Node data;
-	PST l, r;
-  ST(Node data = Node()): data(data), l(0), r(0) {}
+	lli l, r;
+  // ST(Node data = Node()): data(data), l(0), r(0) {}
 };
-Node data(PST& u){return u ? u->data : Node();}
-void pull(PST& u){u->data = data(u->l) + data(u->r);}
-void push(PST& u, lli l, lli r){
-  if(!u->l) u->l = new ST();
-  if(!u->r) u->r = new ST();
-  if(u->data.z){
+ST st[MAXN];
+lli curst = 1; // 0 = NULL
+lli newST(){
+  st[curst].data = Node();
+  st[curst].l = 0;
+  st[curst].r = 0;
+  return curst++;
+}
+Node data(lli u){return u ? st[u].data : Node();}
+void pull(lli u){st[u].data = data(st[u].l) + data(st[u].r);}
+void push(lli u, lli l, lli r){
+  if(!st[u].l) st[u].l = newST();
+  if(!st[u].r) st[u].r = newST();
+  if(st[u].data.z){
     if(l < r){
-      u->l->data.z += u->data.z;
-      u->r->data.z += u->data.z;
+      st[st[u].l].data.z += st[u].data.z;
+      st[st[u].r].data.z += st[u].data.z;
     }
-    u->data.s += (r - l + 1ll) * u->data.z;
-    u->data.z = 0;
+    st[u].data.s += (r - l + 1ll) * st[u].data.z;
+    st[u].data.z = 0;
   }
 }
-void update(PST& u, lli l, lli r, lli ll, lli rr, lli val){
+void update(lli u, lli l, lli r, lli ll, lli rr, lli val){
   push(u, l, r);
   if(l > r or r < ll or l > rr or ll > rr) return;
   if(ll <= l and r <= rr){
-    u->data.z += val;
+    st[u].data.z += val;
     push(u, l, r);
     return;
   }
-  update(u->l, l, mid, ll, rr, val);
-  update(u->r, mid + 1, r, ll, rr, val);
+  update(st[u].l, l, mid, ll, rr, val);
+  update(st[u].r, mid + 1, r, ll, rr, val);
   pull(u);
 }
-Node query(PST& u, lli l, lli r, lli ll, lli rr){
+Node query(lli u, lli l, lli r, lli ll, lli rr){
   push(u, l, r);
   if(!u or l > r or r < ll or l > rr) return Node();
-  if(ll <= l and r <= rr) return u->data;
-  return query(u->l, l, mid, ll, rr) + query(u->r, mid + 1, r, ll, rr);
+  if(ll <= l and r <= rr) return st[u].data;
+  return query(st[u].l, l, mid, ll, rr) + query(st[u].r, mid + 1, r, ll, rr);
 }
