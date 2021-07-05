@@ -1,4 +1,4 @@
-struct Segtree{
+struct LazySegtree{
   #define mid (l + r) / 2
   #define left(u) (u + 1)
   #define right(u) (u + ((mid - l + 1) << 1))
@@ -10,7 +10,7 @@ struct Segtree{
     }
   };
   vector<Node> st;
-  Segtree(int n): st(2 * n) {}
+  LazySegtree(int n): st(2 * n) {}
   void push(int u, int l, int r){
     if(st[u].lazy){
       if(l < r){
