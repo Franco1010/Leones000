@@ -1,6 +1,6 @@
 struct Bipartite_Matching {
-  vvc<int> graph;
-  vi dist, match, used;
+  vector<vector<int>> graph;
+  vector<int> dist, match, used;
   vector<bool> vv;
 
   Bipartite_Matching(int n, int m) {
