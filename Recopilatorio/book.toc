@@ -1,0 +1,77 @@
+\babel@toc {english}{}\relax 
+\global \c@tocdepth 1\relax 
+\contentsline {section}{\numberline {1}Data structures}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Segment tree - Lazy}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Segment tree - Persistence}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Segment tree - 2D}{1}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Fenwick tree}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}STL extended set}{2}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Treap (as BST)}{2}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Treap (implicit key)}{2}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Link-Cut tree}{3}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Convex hull trick (static)}{4}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Convex hull trick (dynamic)}{4}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Disjoint intervals}{4}{subsection.1.11}%
+\contentsline {section}{\numberline {2}Graphs}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bellman-Ford}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Strongly connected components (+ 2-SAT)}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Articulation - Bridges - Biconnected}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Heavy-Light decomposition}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Centroid decomposition}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Parallel DFS}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Eulerian path}{6}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Dynamic connectivity}{7}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Dominator tree}{7}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Math}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Catalan}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Pollard's rho}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Simpson's rule}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Polynomials}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Fast Fourier Transform}{9}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Fast Fourier Transform Operations}{10}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Fast Hadamard Transform}{12}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Karatsuba}{12}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Diophantine}{12}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Chinese remainder theorem}{13}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Discrete log}{13}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}Matrix reduce}{13}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Berlekamp Massey}{14}{subsection.3.13}%
+\contentsline {subsection}{\numberline {3.14}Linear Rec}{14}{subsection.3.14}%
+\contentsline {subsection}{\numberline {3.15}Points Under Line}{14}{subsection.3.15}%
+\contentsline {subsection}{\numberline {3.16}Theorems and Formulas}{14}{subsection.3.16}%
+\contentsline {section}{\numberline {4}Geometry}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Point}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Line}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Circle}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Polygon}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Plane}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Radial order of points}{17}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Convex hull}{17}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Dual from planar graph}{17}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Halfplane intersection}{18}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}KD Tree}{18}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Theorems and Formulas}{19}{subsection.4.11}%
+\contentsline {section}{\numberline {5}Strings}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}KMP}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Z function}{19}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Hashing}{19}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Manacher}{19}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Aho-Corasick}{19}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Suffix automaton}{20}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Palindromic Tree}{20}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Suffix array}{20}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}LCP (Longest Common Prefix)}{21}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Minimum Lexicographic rotation}{21}{subsection.5.10}%
+\contentsline {section}{\numberline {6}Flow}{21}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Matching O(n\textsuperscript {2})}{21}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Hungarian}{21}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Dinic}{22}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Dinic Crystal}{22}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Min cost max flow}{23}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Min cost max flow cycles}{23}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Useful stuff}{24}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Other}{25}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Mo's algorithm}{25}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Other stuff}{25}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Max number of divisors up to 10\textsuperscript {n}}{25}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Ideas}{25}{subsection.7.4}%

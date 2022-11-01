@@ -1,0 +1,6 @@
+PWD /Users/abrahammurillo/Dropbox/Documentación ICPC/Imprimibles/Geometry/latex
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT Geometry.tex
+OUTPUT Geometry.log

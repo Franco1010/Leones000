@@ -1,7 +1,7 @@
 #define mid l + (r - l) / 2
 struct Node{
   lli s, mx;
-  Node(lli s = 0, lli mx = 0): s(s), mx(mx) {};
+  Node(lli s = 0, lli mx = -INF): s(s), mx(mx) {};
   Node operator + (const Node& n) {
     return Node(s + n.s, max(mx, n.mx));
   }

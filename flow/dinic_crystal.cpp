@@ -1,24 +1,13 @@
 template <typename flow_t> struct Dinic {
     const flow_t INF;
-
-    struct edge {
-        int to;
-        flow_t cap;
-        int rev;
-        bool isrev;
-        int idx;
-    };
-
+    struct edge {int to;flow_t cap;int rev;bool isrev;int idx;};
     vector<vector<edge>> graph;
     vector<int> min_cost, iter;
-
     Dinic(int V) : INF(numeric_limits<flow_t>::max()), graph(V) {}
-
     void add(int from, int to, flow_t cap, int idx = -1) {
         graph[from].emplace_back((edge){to, cap, (int)graph[to].size(), false, idx});
         graph[to].emplace_back((edge){from, 0, (int)graph[from].size() - 1, true, idx});
     }
-
     bool bfs(int s, int t) {
         min_cost.assign(graph.size(), -1);
         queue<int> que;
@@ -36,7 +25,6 @@ template <typename flow_t> struct Dinic {
         }
         return min_cost[t] != -1;
     }
-
     flow_t dfs(int idx, const int t, flow_t flow) {
         if(idx == t) return flow;
         for(int &i = iter[idx]; i < graph[idx].size(); i++) {
@@ -52,7 +40,6 @@ template <typename flow_t> struct Dinic {
         }
         return 0;
     }
-
     flow_t max_flow(int s, int t) {
         flow_t flow = 0;
         while(bfs(s, t)) {
@@ -62,7 +49,6 @@ template <typename flow_t> struct Dinic {
         }
         return flow;
     }
-
     void output() {
         for(int i = 0; i < graph.size(); i++) {
             for(auto &e : graph[i]) {
