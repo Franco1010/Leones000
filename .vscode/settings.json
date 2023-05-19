@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "*.ejs": "html",
-        "random": "cpp"
+        "random": "cpp",
+        "regex": "cpp",
+        "chrono": "cpp"
     }
 }

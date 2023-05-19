@@ -1,7 +1,3 @@
-/*
- © $%Y%$-$%M%$-$%D%$ $%h%$:$%m%$:$%s%$ $%U%$ All Rights Reserved
-*/
-
 //#pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,fast-math")
 //#pragma GCC target("avx,avx2,fma")
 #include <bits/stdc++.h>

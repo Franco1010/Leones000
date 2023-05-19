@@ -1,7 +1,3 @@
-/*
- © $%Y%$-$%M%$-$%D%$ $%h%$:$%m%$:$%s%$ $%U%$ All Rights Reserved
-*/
-
 // #pragma GCC optimize("Ofast,no-stack-protector,unroll-loops,fast-math")
 // #pragma GCC target("avx,avx2,fma")
 #include <bits/stdc++.h>
@@ -20,8 +16,15 @@ typedef pair<lli,lli> ii;
 typedef vector<lli> vi;
 #define deb(x) cout << #x": " << (x) << endl;
 
+void solve(){
+  
+}
+
 int main(){ _
   // freopen("file.in","r",stdin);
   // freopen("file.out","w",stdout);
+  lli t; cin >> t;
+  while(t--)
+  solve();
   return 0;
 }
